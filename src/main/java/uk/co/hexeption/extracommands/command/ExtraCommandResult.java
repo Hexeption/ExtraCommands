@@ -50,5 +50,7 @@ public class ExtraCommandResult {
         return EntityArgument.getPlayers((CommandContext<CommandSource>) context, node);
     }
 
-
+    public CommandContext<?> getContext() {
+        return context;
+    }
 }
