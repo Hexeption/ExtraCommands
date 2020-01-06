@@ -14,7 +14,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import uk.co.hexeption.extracommands.command.CommandManager;
+import uk.co.hexeption.extracommands.command.commands.Fly;
 import uk.co.hexeption.extracommands.command.commands.God;
+import uk.co.hexeption.extracommands.command.commands.Heal;
 import uk.co.hexeption.extracommands.config.ConfigHelper;
 import uk.co.hexeption.extracommands.config.ConfigHolder;
 
@@ -48,6 +50,8 @@ public class ExtraCommands {
 
         commandManager = new CommandManager(event.getCommandDispatcher());
         commandManager.registerCommand(new God());
+        commandManager.registerCommand(new Fly());
+        commandManager.registerCommand(new Heal());
     }
 
     @SubscribeEvent
